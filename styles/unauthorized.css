@@ -1,0 +1,256 @@
+/* Unauthorized Page Styles */
+.unauthorized-card {
+  background: var(--secondary-background);
+  border-radius: 24px;
+  padding: 3rem 4rem;
+  text-align: center;
+  box-shadow: var(--card-shadow);
+  max-width: 600px;
+  width: 90%;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+  animation: slideUp 0.6s ease-out;
+  border: 1px solid var(--border-color);
+}
+
+.unauthorized-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--danger), #ff9f43, var(--danger));
+  animation: gradientShift 3s infinite;
+}
+
+.lock-icon-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+}
+
+.lock-icon {
+  font-size: 5rem;
+  color: var(--danger);
+  animation: shake 0.7s ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.ban-icon {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 2.5rem;
+  color: var(--danger);
+  opacity: 0.9;
+  animation: pulse 2s infinite;
+  z-index: 3;
+}
+
+.unauthorized-title {
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--danger) 0%, #ff9f43 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeIn 0.8s ease-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.unauthorized-subtitle {
+  font-size: 2rem;
+  color: var(--text-light);
+  margin: 0.5rem 0 1.5rem;
+  font-weight: 600;
+  animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+.unauthorized-message {
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
+
+.unauthorized-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out 0.4s both;
+  flex-wrap: wrap;
+}
+
+
+
+.help-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  animation: fadeIn 0.8s ease-out 0.5s both;
+  flex-wrap: wrap;
+}
+
+.help-link {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.help-link:hover {
+  color: var(--primary-dark);
+  background: rgba(38, 103, 204, 0.1);
+  transform: translateY(-2px);
+}
+
+.separator {
+  color: var(--border-color);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .unauthorized-card {
+    padding: 2rem 1.5rem;
+    width: 95%;
+  }
+
+  .unauthorized-title {
+    font-size: 4rem;
+  }
+
+  .unauthorized-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .unauthorized-message {
+    font-size: 1rem;
+  }
+
+  .lock-icon {
+    font-size: 4rem;
+  }
+
+  .ban-icon {
+    font-size: 2rem;
+  }
+
+  .unauthorized-actions {
+    flex-direction: column;
+  }
+
+  .help-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+/* Responsive design */
+@media (max-width: 668px) {
+  .unauthorized-card {
+    padding: 2rem 1.5rem;
+    width: 75%;
+  }
+
+  .unauthorized-title {
+    font-size: 4rem;
+  }
+  .lock-icon-container
+  {
+    margin: 0 auto;
+  }
+
+  .unauthorized-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .unauthorized-message {
+    font-size: 1rem;
+  }
+
+  .lock-icon {
+    font-size: 4rem;
+  }
+
+  .ban-icon {
+    font-size: 2rem;
+  }
+
+  .unauthorized-actions {
+    flex-direction: column;
+  }
+
+  .help-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .separator {
+    display: none;
+  }
+}
+
+/* Optional: Add a subtle pattern overlay */
+.unauthorized-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 10px 10px, var(--border-color) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 1;
+}

@@ -1,0 +1,126 @@
+/* The modal container (initially hidden) */
+.notification-modal-container {
+  display: none;
+  /* display: block; */
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* min-width: 320px; */
+  /* width: 50vw; */
+  max-width: 80vw;
+  width: max-content;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); */
+  z-index: 1000;
+  opacity: 0;
+  transition: top 0.5s ease, opacity 0.5s ease;
+  /* border: 2px solid red; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.notification-modal-container.visible {
+  display: block;
+  /* right: 20px; */
+  top: 20px;
+  opacity: 1;
+  /* transform: translateX(0); */
+}
+
+/* Animated bottom border */
+.notification-modal::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  width: 100%;
+  background-color: currentColor;
+  animation: shrinkBar 3s linear forwards;
+}
+
+/* Modal style for success */
+.notification-modal.success {
+  /* background-color: #388e3c;
+  color: rgb(255, 255, 255); */
+  background-color: #f0fdf4;
+  border: 1px solid #16a34a;
+  border-bottom: none;
+  color: #166534 !important;
+}
+
+/* Modal style for error */
+.notification-modal.error {
+  /* background-color: #f44336;
+  color: white; */
+  background-color: #fdecea;
+  background-color: #fdecea;
+  color: #b71c1c !important;
+  /* width: 400px; */
+  border-bottom: none !important;
+  border: 1px solid #dc2626;
+}
+
+/* Common modal styles */
+.notification-modal {
+  font-family: 'Roboto', sans-serif;
+  padding: 7px;
+  /* border-radius: 5px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* font-size: 1.1rem; */
+  font-weight: 500;
+  position: relative;
+  /* width: max-content; */
+  padding-left: 15px;
+  /* width: 500px; */
+  /* min-width: 250px; */
+}
+
+/* Close button style */
+.notification-close {
+  background: none;
+  border: none;
+  /* color: transparent; */
+  /* color: black;
+  color: red; */
+  /* font-size: 20px;
+  font-weight: bold; */
+  /* position: absolute;
+  top: 7px;
+  right: 5px;
+  cursor: pointer; */
+}
+
+
+
+
+
+
+
+
+
+/* success color */
+.success {
+  color: #166534;
+}
+
+/* error color */
+.error {
+  color: #b71c1c;
+}
+
+
+
+@keyframes shrinkBar {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}

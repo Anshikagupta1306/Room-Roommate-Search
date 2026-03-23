@@ -1,0 +1,5 @@
+.match-reasons,.budget,.occupation
+{
+  /* color: red; */
+  color: var(--black);
+}
