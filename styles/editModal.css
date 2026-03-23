@@ -1,0 +1,345 @@
+/* simpleEditModal.css */
+.simple-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.2s ease;
+}
+
+.simple-modal-content {
+    background: var(--secondary-background);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 650px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    animation: slideUp 0.3s ease;
+    overflow: hidden;
+    /* border: 2px solid red; */
+}
+
+.simple-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-dark), #1e4a8b);
+    color: white;
+    /* border: 2px solid red; */
+
+}
+
+.simple-modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+.simple-modal-close {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.simple-modal-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+}
+
+.simple-modal-form {
+    padding: 1.5rem;
+
+    /* border: 2px solid red; */
+}
+
+.simple-form-group {
+    margin-bottom: 1.2rem;
+}
+
+.simple-form-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.simple-form-group label i {
+    color: var(--primary-dark);
+    width: 20px;
+}
+
+.simple-modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+
+/* Preview Section */
+.simple-preview {
+    background: var(--border-color);
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.simple-preview h4 {
+    margin: 0 0 0.8rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.simple-preview-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.preview-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.preview-value {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.simple-preview-item .status-badge {
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+/* 
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+} */
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .simple-modal-content {
+        width: 95%;
+    }
+
+    .simple-modal-header {
+        padding: 1rem;
+    }
+
+    .simple-modal-header h3 {
+        font-size: 1rem;
+    }
+
+    .simple-modal-form {
+        padding: 1rem;
+    }
+
+    .simple-modal-actions {
+        flex-direction: column;
+    }
+
+    .simple-btn {
+        width: 100%;
+    }
+}
+
+/* Dark theme */
+[data-theme='dark'] .simple-modal-content {
+    background: #1a1d24;
+}
+
+[data-theme='dark'] .simple-modal-header {
+    background: linear-gradient(135deg, #2d3748, #1a202c);
+}
+
+
+
+/* Add to editModal.css */
+.date-hint {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-top: 0.3rem;
+    margin-left: 0.3rem;
+}
+
+[data-theme='dark'] .date-hint {
+    color: #aaa;
+}
+
+
+
+
+/* Add to editModal.css */
+
+/* Verification Preview Section */
+.verification-preview {
+    background: var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.verification-preview h4 {
+    /* margin: 0 0 1rem 0; */
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-light);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.preview-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    padding: 0.2rem 0;
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.1);
+}
+
+.preview-row:last-child {
+    border-bottom: none;
+}
+
+.preview-row .label {
+    font-weight: 600;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.preview-row .value {
+    font-weight: 500;
+    color: var(--black);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+/* Verification Select */
+.verification-select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--secondary-background);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.verification-select:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+}
+
+/* Verification Notes */
+.verification-notes {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: var(--secondary-background);
+    color: var(--black);
+    resize: vertical;
+    font-family: inherit;
+}
+
+.verification-notes:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+}
+
+/* Guidelines List */
+.guidelines-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    height: 85px;
+}
+
+.guidelines-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.guidelines-list li i {
+    width: 20px;
+}
+
+.text-success {
+    color: #10b981;
+}
+
+.text-warning {
+    color: #f59e0b;
+}
+
+/* Dark theme adjustments */
+[data-theme='dark'] .verification-preview {
+    background: #2d3748;
+}
+
+[data-theme='dark'] .preview-row {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .verification-select,
+[data-theme='dark'] .verification-notes {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: white;
+}
+
+[data-theme='dark'] .guidelines-list li {
+    color: #aaa;
+}

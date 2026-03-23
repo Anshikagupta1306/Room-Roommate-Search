@@ -1,0 +1,103 @@
+/* === Overlay (just for positioning, no dark background this time) === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;   /* align to top */
+  justify-content: flex-end; /* align to right */
+  padding: 1rem;
+  pointer-events: none; /* allows clicking behind */
+  z-index: 9999;
+}
+
+/* Base Modal Box */
+.modal-box {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); */
+  box-shadow: var(--card-shadow);
+  font-size: 16px;
+  /* font-weight: 500; */
+  width: 300px;
+  /* width: max-content; */
+  min-width: 200;
+  background-color: #fff;
+  transform: translateX(120%);  /* start outside screen */
+  opacity: 0;
+  transition: transform .7s ease, opacity 0.4s ease;
+  pointer-events: auto; /* keep clickable */
+
+  /* border: 2px solid red; */
+}
+
+.modal-box h3
+{
+ margin: 10px;
+}
+
+/* When visible */
+.modal-box.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* When hiding */
+.modal-box.hide {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+/* === Success Style === */
+.modal-box.success {
+  background-color: #e6f4ea;
+  color: #1b5e20;
+  border-left: 6px solid #1b5e20;
+}
+.modal-box.success h2 {
+  color: #1b5e20;
+}
+
+/* === Error Style === */
+.modal-box.error {
+  background-color: #fdecea;
+  color: #b71c1c;
+  border-left: 6px solid #b71c1c;
+}
+.modal-box.error h2 {
+  color: #b71c1c;
+}
+
+/* === Close button === */
+/* .modal-close-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+} */
+
+.modal-overlay .btn-secondary
+{
+  padding: 7px 20px;
+  border-radius: 20px !important;
+}
+
+/* Success button */
+.btn-secondary.success {
+  background: #1b5e20;
+  color: #fff;
+}
+.btn-secondary.success:hover {
+  background: #14532d;
+}
+
+/* Error button */
+.btn-secondary.error {
+  background: #b71c1c;
+  color: #fff;
+}
+.btn-secondary.error:hover {
+  background: #7f1d1d;
+}

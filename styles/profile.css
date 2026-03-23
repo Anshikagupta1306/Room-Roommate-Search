@@ -1,0 +1,668 @@
+/* ===== Profile.css (Enhanced with Collapsible Sections) ===== */
+
+.main-section {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  padding: 2rem 3vw;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  /* position: relative; */
+  padding: 3rem 1.5rem;
+  background: var(--secondary-background);
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  border-radius: 25px;
+  box-shadow: var(--card-shadow);
+  padding-bottom: 1.5rem;
+
+
+
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  width: 20%;
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img,
+.profile-fallback {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  object-fit: cover;
+}
+
+.profile-fallback {
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.profile p {
+  background: var(--primary-dark);
+  color: var(--white);
+  border: 1px solid rgba(52, 152, 219, 0.25);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+/* ===== Contact Info ===== */
+.contact-item {
+  border-bottom: 1px dotted var(--text-light);
+  padding: 0.5rem 0;
+}
+
+.contact-item:last-child {
+  border: none;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.value {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  /* text-align: center; */
+  /* text-align: right; */
+  margin: 5px;
+}
+
+.value.small {
+  font-size: 0.75rem;
+}
+
+.action i {
+  font-size: 1rem;
+  color: #718096;
+  transition: 0.3s ease;
+}
+
+.action i:hover {
+  color: var(--primary-dark);
+  transform: scale(1.15);
+}
+
+/* ===== Main Content ===== */
+.profile-content {
+  background: var(--secondary-background);
+  border-radius: 16px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.profile-content .action-buttons button
+{
+  /* color: white !important; */
+  font-size: 1rem;
+}
+
+.heading {
+  color: var(--primary-dark);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Stats Grid ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, rgba(38, 103, 204, 0.1), rgba(38, 103, 204, 0.05));
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.stat-info h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--primary-dark);
+}
+
+.stat-info p {
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  opacity: 0.2;
+}
+
+/* ===== Jobs/Listings Grid ===== */
+.jobs-grid {
+  border-radius: 16px;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.job-card2 {
+  background: var(--border-color);
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  padding: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: 0.3s ease;
+}
+
+.job-card2:hover {
+  transform: translateY(-3px);
+  background: rgba(38, 103, 204, 0.05);
+}
+
+.job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.job-card-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.company-names {
+  font-size: 0.9rem !important;
+  font-weight: 400;
+}
+
+.job-card2 h3 {
+  color: var(--primary-dark);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Admin Section ===== */
+.admin-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.admin-section {
+  background: var(--border-color);
+  border-radius: 16px;
+  padding: 1.2rem;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+/* 
+.section-header:hover {
+  background: rgba(38, 103, 204, 0.1);
+} */
+
+.collapsible-header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.collapse-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary-dark);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.collapse-btn:hover {
+  background: rgba(38, 103, 204, 0.2);
+}
+
+.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.admin-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-list::-webkit-scrollbar-thumb {
+  background: var(--primary-dark);
+  border-radius: 10px;
+}
+
+.admin-item h4 {
+  color: var(--black);
+  font-size: 1.5rem;
+  margin: 0.7rem;
+}
+
+.admin-item {
+  background: var(--secondary-background);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.admin-item:hover {
+  transform: translateX(5px);
+  border-color: var(--text-light);
+}
+
+.admin-item-info {
+  flex: 1;
+}
+
+.admin-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.admin-item-header h4 {
+  margin: 0;
+  color: var(--black);
+}
+
+.badge
+{
+  padding: 4px !important;
+}
+
+.admin-item-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+/* ===== Buttons ===== */
+.btn-edit,
+.btn-view {
+  background: transparent;
+  border: none;
+  color: var(--primary-dark);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit:hover,
+.btn-view:hover {
+  background: rgba(38, 103, 204, 0.1);
+  transform: scale(1.1);
+}
+
+.btn-delete-small {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-delete-small:hover {
+  background: rgba(239, 71, 111, 0.1);
+  transform: scale(1.1);
+}
+
+.no-items {
+  color: var(--text-light);
+  text-align: center;
+  padding: 2rem;
+  background: var(--secondary-background);
+  border-radius: 12px;
+  border: 1px dashed var(--border-color);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .sidebar
+  {
+    width: 95%;
+  }
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .sidebar
+  {
+    margin-top: 20px;
+  }
+  .profile-content {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .profile-content .stat-card
+  {
+    display: flex;
+    flex-direction: row !important;
+  }
+  .profile-content .action-buttons
+  {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .main-section
+  {
+    padding: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .job-card2{
+    background: var(--secondary-background);
+    border: none;
+  }
+
+  .job-card-header {
+    flex-direction: column;
+    /* gap: 0.8rem; */
+    align-items: flex-start;
+  }
+
+  .job-card-actions {
+    align-self: flex-start;
+  }
+  .section-header
+  {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .admin-item {
+    flex-direction: column;
+    /* gap: 0.8rem; */
+    /* border-left: 2px solid var(--primary-dark); */
+    align-items: flex-start;
+  }
+
+  .admin-section
+  {
+    /* background: var(--secondary-background);
+    box-shadow: var(--card-shadow); */
+  }
+  .admin-item-actions {
+    /* align-self: flex-end; */
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    margin-top: 2vh;
+  }
+
+  .sidebar {
+    width: 87%;
+    padding: 1.5rem;
+  }
+
+  .recruiter-header {
+    flex-direction: column;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .section-header {
+    padding: 0;
+  }
+
+  .section-header .heading {
+    margin-bottom: 10px;
+  }
+
+  .main-section {
+    /* border: 2px solid red; */
+  }
+
+  .value {
+    /* justify-content: space-between; */
+    /* text-align: center; */
+    /* display: flex; */
+  }
+
+  .admin-item {
+    padding-bottom: 0;
+  }
+
+  .admin-item-info h4 {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left{
+    text-align: left !important;
+    /* justify-content: left; */
+  }
+}
+
+/* ===== Utility Classes ===== */
+.noShadow {
+  box-shadow: none !important;
+}
+
+.status-badge {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+  text-transform: capitalize;
+}
+
+.status-applied {
+  background: linear-gradient(135deg, #e8f1ff, #d9e6ff);
+  color: #1e40af;
+  border: 1px solid #1e40af33;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-5 {
+  margin-left: 5px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+/* ===== Dark Theme ===== */
+[data-theme='dark'] .stat-card {
+  background: #333944;
+  color: var(--black);
+}
+
+[data-theme='dark'] .admin-item,
+[data-theme='dark'] .job-card2 {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .btn-edit:hover,
+[data-theme='dark'] .btn-view:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] .btn-delete-small:hover {
+  background: rgba(239, 71, 111, 0.2);
+}
+
+[data-theme='dark'] .admin-section {
+  background: #1a1d24;
+}
+
+[data-theme='dark'] .no-items {
+  background: #2d3748;
+}
+
+
+
+
+/* Add to profile.css */
+
+/* Unverified Badge */
+.unverified-badge {
+    background: #f59e0b;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+/* Verified Badge */
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verified-badge i {
+    font-size: 1.1rem;
+}
+
+/* Admin Item Header Adjustments */
+.admin-item-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.admin-item-header h4 {
+    margin: 0;
+}
+
+/* Button Verify */
+.btn-verify {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-verify:hover {
+    background: rgba(16, 185, 129, 0.1);
+    transform: scale(1.1);
+}
+
+/* Status Pending Badge */
+.status-pending {
+    background: linear-gradient(135deg, #fff3cd, #ffe69c);
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+[data-theme='dark'] .status-pending {
+    background: linear-gradient(135deg, #665d3c, #5e4f2e);
+    color: #ffd966;
+    border-color: #8a7a4a;
+}

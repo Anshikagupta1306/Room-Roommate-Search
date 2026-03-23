@@ -1,0 +1,62 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: 'Roboto', sans-serif;
+
+}
+
+#root {
+  background-color: white;
+  background: #00416A;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E4E5E6, #00416A);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background: #536976;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #292E49, #536976);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #292E49, #536976);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100%; /* Changed from 100vw to 100% */
+  max-width: 100%; /* Ensure it doesn't exceed viewport */
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  /* Remove or comment out the border for production */
+  /* border: 2px solid red; */
+  
+  margin: 0 !important;
+
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); 
+  background:#0f172a; 
+  background: var(--primary-background);
+  /* background: url("../src/img/bg-1.jpg"); */
+  /* background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+/* Add this to ensure all child elements don't cause overflow */
+.App {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+

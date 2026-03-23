@@ -1,0 +1,245 @@
+/* update-profile.css - Enhanced version */
+.update-profile-view {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+    background: var(--secondary-background);
+    border: 1px solid rgba(128, 128, 128, 0.491);
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-sections {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--border-color);
+    border-radius: 25px;
+    box-shadow: var(--card-shadow);
+}
+
+.form-sections h3 {
+    color: var(--primary-dark);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--primary-dark);
+    padding-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+
+/* Tags and Suggestions */
+.tags-suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.suggestion-tag {
+    padding: 0.5rem 1rem;
+    background: var(--secondary-background);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-light);
+}
+
+.suggestion-tag:hover {
+    border-color: var(--primary-dark);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.suggestion-tag.selected {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: linear-gradient(135deg, #f0f7ff, #e8f0fe);
+    /* color: var(--primary-dark); */
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(38, 103, 204, 0.2);
+    transition: all 0.2s ease;
+}
+
+.tag i {
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.tag i:hover {
+    color: var(--danger);
+}
+
+.tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(38, 103, 204, 0.1);
+}
+
+/* Custom Input Group */
+.custom-input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.custom-input-group input {
+    flex: 1;
+    padding: 0.55rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.custom-input-group button {
+    white-space: nowrap;
+    padding: 0.55rem 1.5rem;
+    border-radius: 8px !important;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* Responsive */
+@media (max-width: 968px) {
+    .container{
+        /* padding: 0; */
+    }
+    .update-profile-view {
+        width: 100%;
+        padding: 0;
+        padding-top: 3vh;
+        margin: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-btn {
+        justify-content: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-sections {
+        padding: 1rem;
+    }
+
+    .form-sections h3 {
+        font-size: 1.1rem;
+    }
+
+    .tags-suggestions {
+        gap: 0.3rem;
+    }
+
+    .suggestion-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
